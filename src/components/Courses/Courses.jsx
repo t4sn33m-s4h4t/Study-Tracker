@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useStudy } from '../../context/StudyContext';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   const { state, setState, bySubjectId, showToast } = useStudy();
@@ -203,12 +204,13 @@ const Courses = () => {
                   </button>
                 )}
                 {c.discussUrl && (
-                  <button 
+                  <Link 
+                    to={c.discussUrl}
+                    target="_blank"
                     className="flex-1 py-2.5 px-3 rounded-lg text-sm font-medium bg-surface2 border border-border text-text-secondary hover:border-accent hover:text-accent transition-colors"
-                    onClick={() => window.open(c.discussUrl, '_blank')}
-                  >
+                    >
                     💬 Discuss
-                  </button>
+                  </Link>
                 )}
               </div>
               <div className="flex gap-2">
