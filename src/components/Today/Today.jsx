@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useStudy } from '../../context/StudyContext';
+import { Link } from 'react-router-dom';
 
 const Today = () => {
   const { state, setState, todayStr, daysBetween, showToast } = useStudy();
@@ -53,15 +54,12 @@ const Today = () => {
         <p className="text-text-secondary text-sm mb-6 max-w-md mx-auto">
           Get started by setting up your subjects and exam date in Settings.
         </p>
-        <button 
+        <Link to="/settings"
           className="btn-primary px-8 py-3"
-          onClick={() => {
-            const settingsTab = document.querySelector('[data-tab="settings"]');
-            if (settingsTab) settingsTab.click();
-          }}
+          
         >
           Go to Settings →
-        </button>
+        </Link>
       </div>
     );
   }

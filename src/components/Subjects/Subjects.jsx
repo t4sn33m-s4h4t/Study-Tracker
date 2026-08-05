@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useStudy } from '../../context/StudyContext';
+import { Link } from 'react-router-dom';
 
 const Subjects = () => {
   // ALL HOOKS AT THE TOP
@@ -40,15 +41,12 @@ const Subjects = () => {
         <p className="text-text-muted text-sm">
           Go to Settings to add subjects and start tracking your progress.
         </p>
-        <button 
+        <Link to="/settings" 
           className="btn-primary mt-4 px-6 py-2.5 text-sm"
-          onClick={() => {
-            const settingsTab = document.querySelector('[data-tab="settings"]');
-            if (settingsTab) settingsTab.click();
-          }}
+          
         >
           Go to Settings →
-        </button>
+        </Link>
       </div>
     );
   }
