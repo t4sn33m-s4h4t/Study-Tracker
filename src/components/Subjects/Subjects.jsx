@@ -41,12 +41,14 @@ const Subjects = () => {
         <p className="text-text-muted text-sm">
           Go to Settings to add subjects and start tracking your progress.
         </p>
-        <Link to="/settings" 
-          className="btn-primary mt-4 px-6 py-2.5 text-sm"
+      <div className="mt-6">
+          <Link to="/settings" 
+          className="btn-primary px-6 py-2.5 text-sm"
           
         >
           Go to Settings →
         </Link>
+      </div>
       </div>
     );
   }

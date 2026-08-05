@@ -212,15 +212,12 @@ const Today = () => {
         <div className="glass-card text-center py-8">
           <p className="text-text-muted text-sm">
             No subjects selected yet. 
-            <button 
+            <Link to="/settings" 
               className="text-accent hover:underline ml-1"
-              onClick={() => {
-                const settingsTab = document.querySelector('[data-tab="settings"]');
-                if (settingsTab) settingsTab.click();
-              }}
+             
             >
               Go to Settings →
-            </button>
+            </Link>
           </p>
         </div>
       )}
